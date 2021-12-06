@@ -1,0 +1,21 @@
+{
+    "clases": [
+        {
+            "seccion":"005D",
+            "asignatura":"Aplicaciones Móviles",
+            "fecha":"02-11-2021",
+            "horaInicio":"11:00",
+            "horaFin":"13:15"
+        },
+        {
+            "seccion":"005D",
+            "asignatura":"Aplicaciones Móviles",
+            "fecha":"05-11-2021",
+            "horaInicio":"14:00",
+            "horaFin":"15:30"
+        }
+    ]
+    
+}
+
+

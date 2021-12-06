@@ -1,0 +1,11 @@
+.toolbar-background {
+  background: #428cff;
+}
+
+.fondo{
+  background-color: transparent;
+}
+//fondo de la aplicacion
+ion-content.background{
+    --background: url(../img/fondo.jpg) 0 0/100% 100% no-repeat;
+  }

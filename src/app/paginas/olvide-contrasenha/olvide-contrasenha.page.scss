@@ -1,0 +1,21 @@
+//fondo de la aplicacion
+ion-content.background{
+    --background: url(../img/Logoduoc3.jpg) 0 0/100% 90% no-repeat;
+    background-color: #307FE2;
+}
+
+//fondo card
+.borde{
+    background-color: #FFFF01 ;
+    margin-top: 80px;
+}
+
+//usuario
+.usuario{
+    --border-radius: 10px;
+    margin-top: 10px;
+}
+
+.boton{
+    margin: 1px;
+}

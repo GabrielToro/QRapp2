@@ -1,0 +1,52 @@
+<ion-content class="contenido">
+
+  <ion-title class="titulo">
+    Bienvenido
+  </ion-title>
+
+  <!-- Se ocupará un botón para iniciar el escaneo en la pantalla -->
+  <ion-card-content>
+    <ion-button (click)="startScan()" class="qr">
+      <ion-icon slot="start" name="qr-code-outline"></ion-icon>
+      Comenzar a escanear
+    </ion-button>
+  </ion-card-content>
+
+  <!-- Botón para reiniciar el resultado, se mostrará solo cuando se ejecuta el botón de comenzar a escanear -->
+  <ion-button (click)="reset()" color="warning" *ngIf="scanResult">
+    <ion-icon slot="start" name="refresh-outline"></ion-icon>
+    Volver a escanear
+  </ion-button>
+
+  <!-- Se instancia el video, el cual servirá como ViewChild, estará oculto hasta que comienze a escanear -->
+  <video #video [hidden]="!scanActive" width="100%"></video>
+
+  <!-- Sección que analiza los datos, estará oculta para no molestar al usuario -->
+  <canvas #canvas hidden></canvas>
+
+  <!-- Botón para dejar de escanear -->
+  <ion-button (click)="stopScan()" color="danger" *ngIf="!scanResult" class="cancelar" [hidden]="!scanActive">
+    <ion-icon slot="start" name="close-outline"></ion-icon>
+    Dejar de escanear
+  </ion-button>
+
+  <!-- Elemento que nos mostrará que estamos escaneando -->
+  <ion-card *ngIf="scanResult">
+    <ion-card-header>
+      <ion-card-title>Código QR</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>Asignatura: {{ jsonResult.asignatura }}</p>
+      <p>Seccion: {{ jsonResult.seccion }}</p>
+      <p>Docente: {{ jsonResult.docente }}</p>
+      <p>Correo: {{ jsonResult.correo }}</p>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-row>
+    <ion-col class="boton">
+      <ion-button type="ion-button" expand="block" (click)="verClases()">Ver clases</ion-button>
+    </ion-col>
+  </ion-row>
+
+</ion-content>

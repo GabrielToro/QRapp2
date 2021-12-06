@@ -1,0 +1,50 @@
+<!-- Para esta página se ocupa ReactiveForms -->
+
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <!-- Botón para ir hacia atrás, redirecciona hacia el home -->
+      <ion-back-button defaultHref="home">Back</ion-back-button>
+    </ion-buttons>
+      <ion-title position="center">Ingreso de usuario</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="background">
+  <form novalidate [formGroup]="inicioSesion" (ngSubmit)="iniciarSesion()">
+
+      <!-- Se debe ocupar formGroup para crear un formulario en FormControl -->
+
+        <ion-item class="login" color="light">
+          <ion-label position="floating">Usuario</ion-label>
+          <ion-input type="text" formControlName="user"></ion-input>
+        </ion-item>
+
+        <ion-item class="contrasena" color="light">
+          <ion-label position="floating">Contraseña</ion-label>
+          <ion-input type="password" formControlName="password"></ion-input>
+        </ion-item>
+
+        <ion-row>
+          <ion-col class="recuperar">
+            <!-- El texto está dentro de u para estár subrayado -->
+            <center>
+              <u><span (click)="olvideContrasenha()">Olvidé mi contraseña</span></u>
+            </center>
+          </ion-col>
+        </ion-row>
+
+      <ion-card-content>
+        <ion-row>
+          <ion-col class="boton">
+            <center>
+              <ion-button type="submit"  id="boton_login" size="default">Ingresar</ion-button>
+            </center>
+          </ion-col>
+        </ion-row>
+      </ion-card-content>
+
+  </form>
+
+
+</ion-content>

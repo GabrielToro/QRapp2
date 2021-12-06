@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <!-- Botón para ir hacia atrás, redirecciona hacia el home -->
+      <ion-back-button defaultHref="login">Back</ion-back-button>
+    </ion-buttons>
+      <ion-title position="center">Olvidé mi contraseña</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="background">
+
+  <form novalidate [formGroup]="recuperarContrasenha" (ngSubmit)="recuperar()">
+    <ion-card class="borde">
+      <ion-card-content>
+        <ion-item color="light" class="usuario">
+          <ion-label position="floating">Usuario</ion-label>
+          <ion-input type="text" formControlName="user"></ion-input>
+        </ion-item>
+        <ion-row>
+          <ion-col><ion-button type="submit" expand="block" class="boton">Recuperar</ion-button></ion-col>
+        </ion-row>
+      </ion-card-content>
+    </ion-card>
+  </form>
+  <!-- Se agrega un nuevo botón para triggerear una página 404 de prueba -->
+  <ion-col><ion-button type="submit" expand="block" color=danger (click)="notFound()">¿No recuerdas tu correo?</ion-button></ion-col>
+
+</ion-content>

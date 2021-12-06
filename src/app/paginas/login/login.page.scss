@@ -1,0 +1,42 @@
+span {
+    color: #428cff;
+}
+
+u{
+    color: #428cff;
+}
+
+//fondo de la aplicacion
+ion-content.background{
+    --background: url(../img/Logoduoc2.jpg) 0 0/100% 90% no-repeat;
+    background-color: #307FE2;
+}
+
+//login
+.login{
+    margin-top: 100px;
+    --border-radius: 10px;
+    margin-right: 50px;
+    margin-left: 50px;
+    
+  }
+
+//contraseña
+.contrasena{
+    margin-top: 10px;
+    --border-radius: 10px;
+    margin-right: 50px;
+    margin-left: 50px;
+  }
+
+//recuperarcontra
+
+.recuperar{
+    margin-top: 10px;
+  }
+
+//ingresar
+.boton{
+  margin-top: 30px;
+  
+}

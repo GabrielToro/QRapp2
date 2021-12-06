@@ -1,0 +1,25 @@
+
+.contenido {
+  // overwrite inline styles
+  --offset-bottom: auto!important;
+  --overflow: hidden;
+  overflow: auto;
+  background-color: transparent;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+//titulo de bienvenida
+.titulo{
+  margin-top: 10px;
+  text-align: center;
+}
+//Escanear QR
+ .qr{
+  margin-top: 70px;
+}
+//cancelar escaner
+.cancelar{
+  margin-top: 10px;
+}

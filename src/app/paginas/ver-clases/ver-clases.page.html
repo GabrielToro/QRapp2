@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <!-- Botón para ir hacia atrás, redirecciona hacia el home -->
+      <ion-back-button defaultHref="home">Back</ion-back-button>
+    </ion-buttons>
+    <ion-title>Ver clases</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-text-center">
+  <ion-card>
+    <ion-card-content>
+      <ion-list-header>
+        <ion-title>Clases</ion-title>
+      </ion-list-header>
+      <ion-list>
+        <ion-item *ngFor="let clase of clases">
+          <ion-label>
+            <h3>{{clase.asignatura}} {{clase.seccion}}</h3>
+            <p>{{clase.fecha}}</p>
+            <p>{{clase.horaInicio}} - {{clase.horaFin}}</p>
+          </ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>
